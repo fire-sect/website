@@ -40,32 +40,27 @@ header{
 
 
 nav{
-    width: 60%;
-    /* background-color: red; */
+    width: 60%;    
     display: flex;
     justify-content: space-around;
 }
 
 nav a{
-    /* avoid default text-decoration */
+    
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
     font-weight: 900;
-    font-size: 17px;
-    /* Why did i use position relative */
+    font-size: 17px;   
     position: relative;
 }
 
 nav a:first-child{
     color:#4458dc;
 }
-
-/* adding animation to navigation bar. */
 nav a:before{
     content: " ";
-    position:absolute;
-    /* The more the value of top is the more vertival gap b/w nav and content */
+    position:absolute;   
     top: 110%;
     left: 0;
     width: 0;
@@ -73,8 +68,31 @@ nav a:before{
     border-bottom: 2px solid #4458dc;
     transition: all 0.4s linear;
 }
-/* There transiton and animation */
-nav a:hover:before{
-    /* for becoming width it will take 0.4 sec */
+
+nav a:hover:before{   
     width: 100%;
 }
+
+
+
+/* Main tag */
+main{
+    /* since we have already given navigation 80vh */
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rightside{
+    /* using fancy border from 9elements.github.io */
+    border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+    background-color: #c3f5ff;
+    }
+
+.rightside svg{
+    max-width: 450px;
+    height: auto;
+    /* background-color: red; */
+} 
+
