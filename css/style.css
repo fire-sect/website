@@ -1,5 +1,4 @@
-*{margin:0; padding: 0; font-family: 'Zen Dots', cursive;   
-} 
+*{margin:0; padding: 0; font-family: 'Zen Dots', cursive;} 
 
 header{
     width: 100%;
@@ -11,11 +10,8 @@ header{
     
     width: 100%; height: 20vh ;
     display: flex;
-    /* horizontally center j */
-    justify-content: space-around;  
-    /*  vertically center*/
+    justify-content: space-around;
     align-items: center;
-    /* note: for linear grad you must have to use background-image */
     background-image: linear-gradient(to top,#fff 80%, #c3f5ff 20%);
 }
 
@@ -23,21 +19,13 @@ header{
     width: 40%;
     color: white;
     background-image: linear-gradient(#8d98e3 40%, #854fee 60%);
-
-    /* Note: with padding the size of the box must have increased so use box-sizing:border-box */
-    /* Include padding and border in the element's total width and height: */
-
-    /* The box-sizing property defines how the width and height of an element are calculated: 
-    should they include padding and borders, or not. */
     padding-left: 100px;    
     box-sizing: border-box;
     
 }
-.logo h1{
-    /* rem: root em 1em=16px */
+.logo h1{   
     text-transform: uppercase;
     font-size: 1.6rem;
-    /* animation:add_shaking 2s linear infinite; */
     animation:add_shaking 3s linear 1s infinite running;
     animation-direction: alternate;
 }
@@ -45,6 +33,48 @@ header{
 @keyframes add_shaking{
     from{padding-left: 40px;}
     to{padding-right: 40px;}
-    /* remove: font-size they are just for play */
-    /* to{padding-right: 40px; font-size:1.4rem;} */
+   
+}
+
+
+
+
+nav{
+    width: 60%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a{
+    /* avoid default text-decoration */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    font-size: 17px;
+    /* Why did i use position relative */
+    position: relative;
+}
+
+nav a:first-child{
+    color:#4458dc;
+}
+
+/* adding animation to navigation bar. */
+nav a:before{
+    content: " ";
+    position:absolute;
+    /* The more the value of top is the more vertival gap b/w nav and content */
+    top: 110%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid #4458dc;
+    transition: all 0.4s linear;
+}
+/* There transiton and animation */
+nav a:hover:before{
+    /* for becoming width it will take 0.4 sec */
+    width: 100%;
 }
