@@ -131,11 +131,10 @@ main{
     font-weight: lighter;
     word-spacing: 5px;
 }
-
-.leftside .btn1{
-    text-decoration:none;
+.leftside .btn1, .btn2{
+    text-decoration: none;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 14px;
     text-align: center;
     padding: 12px 25px;
     cursor: pointer;
@@ -143,14 +142,23 @@ main{
     border-radius: 5px;
     display: inline-block;
     margin-right: 50px;
-    color: #fff;
     /* word-spacing:2px; */
     letter-spacing: 3px;
+}
+
+.leftside .btn1{    
+    color: #fff;    
     /* very important */
     background-image: linear-gradient(to right, #4458dc 0%,#854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
     /*because of below line a purple color in right of button will appear.*/
     border: double 2px transparent;
     box-shadow: 0px 10px 30px rgba(118,85,225,.3);
-
 }
 
+.leftside .btn2{
+      color: #222;
+      background-color: #fff;
+      border: 2px solid #4458dc;
+      box-shadow: none;
+      border-radius: 5px;
+}
