@@ -37,8 +37,6 @@ header{
 }
 
 
-
-
 nav{
     width: 60%;    
     display: flex;
@@ -75,14 +73,13 @@ nav a:hover:before{
 
 
 
-/* Main tag */
 main{    
     height: 80vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-/*right side */
+
 .rightside{    
     border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
     background-color: #c3f5ff;
@@ -95,7 +92,6 @@ main{
      
 }  
 
-/*  leftside */
 .leftside{
     color: #000;
     text-transform: uppercase;
@@ -103,7 +99,6 @@ main{
 .leftside h3{
     font-size: 37px;
     margin-bottom:20px;
-    /* Note, we are giving position relative so that we can give absolute position below */
     position: relative;
 }
 
@@ -111,11 +106,9 @@ main{
     content:"";
     width:450px;
     height:3px;
-    /* we can use absolute because we have given relative position above */
     position:absolute;
     top:56%;
     left:18%;
-    /* so there are two ways to give bottom radius */
     border-bottom: 3px solid #000;
     background:#c3f5ff;
 }
@@ -142,15 +135,12 @@ main{
     border-radius: 5px;
     display: inline-block;
     margin-right: 50px;
-    /* word-spacing:2px; */
     letter-spacing: 3px;
 }
 
 .leftside .btn1{    
     color: #fff;    
-    /* very important */
     background-image: linear-gradient(to right, #4458dc 0%,#854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
-    /*because of below line a purple color in right of button will appear.*/
     border: double 2px transparent;
     box-shadow: 0px 10px 30px rgba(118,85,225,.3);
 }
@@ -172,7 +162,6 @@ main{
 
 .leftside .btn1:hover{
     color: #222;
-    /* we must remove background-image ,so that background-color takes place.   */
     background-image:none;
     background-color:#fff;
     border: 2px solid #4458dc;
